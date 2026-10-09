@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body,#root {
+  width: 100%;
+  min-height: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #111827;
+}
+nav {
+  width: 100%;
+  background: #111827;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h1 {
+  font-size: 28px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.heading {
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+}
+.heading h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(0deg, #fc00ff, #00dbde);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.products {
+  width: 100%;
+  padding: 20px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  padding: 15px;
+}
+.card-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.category {
+  color: #6366f1;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  display: -webkit-box;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 18px;
+  padding-top: 18px;
+}
+.price {
+  font-size: 21px;
+  font-weight: bold;
+}
+.rating {
+  font-size: 14px;
+}
+.add-to-cart-btn {
+    width: auto;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    height: 50px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+}
+.add-to-cart-btn:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+.add-to-cart-btn {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.cart-page {
+  width: 100%;
+  padding: 40px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.cart-page h2 {
+  grid-column: 1 / 4;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(0deg, #fc00ff, #00dbde);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.cart-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.cart-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+.cart-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.cart-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+.quantity button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(10, 82, 235);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.quantity button:hover {
+  background: #374151;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.quantity span {
+  font-size: 18px;
+  font-weight: bold;
+}
+.empty-cart {
+  grid-column: 1 / 4;
+  text-align: center;
+  padding: 60px;
+  color: #666;
+  font-size: 20px;
+}
+.filters {
+  width: 100%;
+  padding: 0 50px 20px;
+  display: flex;
+  gap: 15px;
+}
+.filters input {
+  flex: 1;
+}
+.filters input,.filters select {
+  padding: 12px;
+  border: 1px solid #6366f1;
+  border-radius: 7px;
+  font-size: 15px;
+  background: whitesmoke;
+  outline: none;
+}
