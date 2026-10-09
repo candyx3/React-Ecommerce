@@ -60,4 +60,5 @@ Open the local URL shown in the terminal to view the website.
 ## Author
 
 Chandru
+
 GitLab: https://gitlab.com/candyx3
